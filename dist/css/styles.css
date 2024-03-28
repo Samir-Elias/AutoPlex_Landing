@@ -10,10 +10,60 @@
  * Copyright 2011-2022 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
-
- .espacio{
-  height: 30px;
+ 
+ #titulo {
+   font-family: "Oswald", sans-serif;
+   font-optical-sizing: auto;
+   font-style: normal;
  }
+
+.intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url('../assets/img/bg-masthead.jpg');
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position:top;
+  height: 85vh; /* This will make the container fill the viewport height */
+  color: #ffffff; /* Make sure the text is readable over the background */
+  padding: 0 20px; /* Add some padding */
+  margin-right: 50%;
+}
+
+div .welcome-text {
+  margin-left: 107%;
+  color:rgb(80, 79, 79);
+  font-size: 2.2rem;
+
+}
+
+@media (max-width:1000px){
+  .intro{
+    margin-right: 0px;
+  }
+  div .welcome-text{
+    margin-left: 6% ;
+    color: whitesmoke;  
+  }
+}
+@media (max-width: 768px) {
+  .intro {
+    flex-direction: column;
+    align-items: center; /* Centra los elementos hijos */
+    text-align: center; /* Centra el texto */
+    padding: 20px; /* Añade un poco más de relleno */
+  }
+  
+  .welcome-text {
+    max-width: 100%; /* Permite que el texto use todo el ancho disponible */
+    margin-bottom: 20px; /* Añade margen debajo del texto antes de la imagen del vendedor */
+  }
+  /* Ajusta el efecto hover para que sea menos pronunciado o elimínalo según la interacción esperada en dispositivos táctiles */
+}
+
+
+
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -66,7 +116,7 @@
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
   --bs-body-color: #212529;
-  --bs-body-bg: #fff;
+  --bs-body-bg: #FFEEC5;
   --bs-border-width: 1px;
   --bs-border-style: solid;
   --bs-border-color: #dee2e6;
