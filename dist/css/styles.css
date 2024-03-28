@@ -10,7 +10,14 @@
  * Copyright 2011-2022 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
- 
+
+ /* #carouselExampleIndicators{
+  height: 100%;
+  object-fit: cover;
+ } */
+
+
+
  #titulo {
    font-family: "Oswald", sans-serif;
    font-optical-sizing: auto;
@@ -29,6 +36,29 @@
   color: #ffffff; /* Make sure the text is readable over the background */
   padding: 0 20px; /* Add some padding */
   margin-right: 50%;
+}
+
+.sticky-3d-link {
+  position: fixed; /* Hace que el enlace permanezca fijo en la pantalla */
+  bottom: 100px; /* Distancia desde el fondo de la pantalla */
+  right: 20px; /* Distancia desde la derecha de la pantalla */
+  background-color: #03649c; /* Color de fondo */
+  color: white; /* Color del texto */
+  padding: 10px 20px; /* Espaciado interno */
+  text-decoration: none; /* Quita el subrayado del texto */
+  font-size: 16px; /* Tamaño del texto */
+  border-radius: 5px; /* Bordes redondeados */
+  
+  /* Efecto 3D */
+  transform: perspective(500px) rotateX(10deg) rotateY(10deg);
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave al cambiar el estado */
+}
+
+.sticky-3d-link:hover {
+  /* Cambios al pasar el mouse: más elevación y sombra más pronunciada */
+  transform: perspective(500px) rotateX(15deg) rotateY(15deg);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 div .welcome-text {

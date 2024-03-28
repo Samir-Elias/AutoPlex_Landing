@@ -5,3 +5,7 @@
 */
 // This file is intentionally blank
 // Use this file to add JavaScript to your project
+$('.carousel').carousel()
+$('.carousel').carousel({
+    interval: 2000
+  })
